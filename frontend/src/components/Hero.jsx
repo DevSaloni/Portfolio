@@ -9,7 +9,7 @@ const Hero = () => {
   const [typingSpeed, setTypingSpeed] = useState(150);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  const roles = ["Blockchain Developer", "Web Designer", "Full Stack Dev"];
+  const roles = ["Full Stack Developer", "MERN Stack Expert", "Web3/Blockchain Dev"];
 
   useEffect(() => {
     const handleTyping = () => {
@@ -68,8 +68,8 @@ const Hero = () => {
           </div>
 
           <p className="description">
-            I build scalable web and decentralized applications with clean UI and seamless UX.
-            Focusing on standard <span className="highlight">MERN Stack</span> and <span className="highlight">Web3</span> technologies.
+            Full Stack Developer skilled in <span className="highlight">MERN stack</span> and <span className="highlight">Web3</span> technologies.
+            Experienced in building responsive web apps and decentralized applications (dApps) using React, Node.js, MongoDB, and Ethereum.
           </p>
 
           <div className="cta-group">
@@ -86,16 +86,16 @@ const Hero = () => {
 
           {/* Restoring social links as they were part of the "prev" design usually */}
           <div className="social-links">
-            <a href="https://github.com" target="_blank" rel="noreferrer"><FaGithub /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer"><FaTwitter /></a>
+            <a href="https://github.com/DevSaloni" target="_blank" rel="noreferrer" className="social-icon-btn"><FaGithub /></a>
+            <a href="https://linkedin.com/in/saloni-pawar-630b23270" target="_blank" rel="noreferrer" className="social-icon-btn"><FaLinkedinIn /></a>
+            <a href="mailto:salonipawar294@gmail.com" target="_blank" rel="noreferrer" className="social-icon-btn"><span className="text-xl">✉</span></a>
           </div>
 
         </div>
 
         <div className="hero-visual" style={{ transform: `translate(-${mousePosition.x}px, -${mousePosition.y}px)` }}>
           <div className="image-frame">
-            <img src="/saloniback.jpg" alt="Saloni Pawar" className="profile-img" />
+            <img src="/hero-girl.png" alt="Saloni Pawar" className="profile-img" />
             <div className="frame-border"></div>
 
             {/* Restored Code Snippet Card */}
@@ -104,7 +104,7 @@ const Hero = () => {
                 <code>
                   <span className="k">const</span> <span className="v">developer</span> = <span className="b">{`{`}</span>{'\n'}
                   {'  '}name: <span className="s">"Saloni"</span>,{'\n'}
-                  {'  '}skills: [<span className="s">"React"</span>, <span className="s">"Solidity"</span>],{'\n'}
+                  {'  '}skills: [<span className="s">"MERN"</span>, <span className="s">"Solidity"</span>, <span className="s">"Web3"</span>],{'\n'}
                   {'  '}hardWorker: <span className="k">true</span>{'\n'}
                   <span className="b">{`}`}</span>;
                 </code>

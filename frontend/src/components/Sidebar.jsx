@@ -10,7 +10,6 @@ const Sidebar = () => {
         <a href="https://github.com" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
       </div>
       <div className="line bottom"></div>
     </div>

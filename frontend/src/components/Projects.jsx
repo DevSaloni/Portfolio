@@ -6,14 +6,22 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 const projectsData = [
     {
         id: 1,
-        title: "Maid Finder",
-        description: "A comprehensive platform to find and hire domestic helpers. Features include user authentication, profile filtering, and secure booking management.",
-        tech: ["React", "Node.js", "MongoDB", "Express"],
+        title: "Maid Finder (Web3 Platform)",
+        description: "A blockchain-based platform connecting verified women workers with employers. Features an Ethereum smart contract escrow system for secure payments and IPFS for decentralized profile storage.",
+        tech: ["MERN", "Solidity", "Ethereum", "Ethers.js", "IPFS", "Hardhat"],
         liveLink: "https://maid-finder-delta.vercel.app/",
-        githubLink: "https://github.com/yourusername/maid-finder", // Placeholder
-        image: "/maid-finder-preview.jpg" // Placeholder image path
+        githubLink: "https://github.com/DevSaloni",
+        image: "/assets/maid-finder.png"
     },
-    // Add more projects here
+    {
+        id: 2,
+        title: "University Project Management System",
+        description: "A role-based project tracking system with Admin, Mentor, and Student dashboards. Includes proposal approval workflow, weekly progress tracking, and real-time chat collaboration.",
+        tech: ["MongoDB", "Express.js", "Next.js", "Node.js", "JWT", "Socket.io"],
+        liveLink: "#",
+        githubLink: "https://github.com/DevSaloni",
+        image: "/assets/project-mgmt.png"
+    }
 ];
 
 const Projects = () => {
@@ -26,11 +34,7 @@ const Projects = () => {
                     {projectsData.map((project) => (
                         <div className="project-card" key={project.id}>
                             <div className="project-image">
-                                {/* Use a placeholder div if image is missing/broken for now */}
-                                <div className="img-placeholder">
-                                    <span>{project.title} Preview</span>
-                                </div>
-                                {/* <img src={project.image} alt={project.title} /> */}
+                                <img src={project.image} alt={project.title} />
                             </div>
 
                             <div className="project-content">

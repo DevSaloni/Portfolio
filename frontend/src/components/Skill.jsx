@@ -5,7 +5,7 @@ import {
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaJava, FaGithub, FaPython, FaEthereum, FaWallet, FaGitAlt
 } from 'react-icons/fa';
 import {
-  SiMongodb, SiExpress, SiSolidity, SiPostman, SiNextdotjs, SiTypescript, SiRedis, SiTailwindcss, SiVite
+  SiMongodb, SiExpress, SiSolidity, SiPostman, SiNextdotjs, SiTypescript, SiRedis, SiTailwindcss, SiVite, SiMysql, SiPostgresql, SiEthereum, SiIpfs
 } from 'react-icons/si';
 
 const skills = [
@@ -26,6 +26,10 @@ const skills = [
   { name: "GitHub", icon: <FaGithub />, color: "#ffffff" },
   { name: "Python", icon: <FaPython />, color: "#3776AB" },
   { name: "Java", icon: <FaJava />, color: "#007396" },
+  { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "#06B6D4" },
+  { name: "PostgreSQL", icon: <SiPostgresql />, color: "#4169E1" },
+  { name: "MySQL", icon: <SiMysql />, color: "#4479A1" },
+  { name: "IPFS", icon: <SiIpfs />, color: "#65C2CB" },
   { name: "Postman", icon: <SiPostman />, color: "#FF6C37" },
 ];
 
