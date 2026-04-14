@@ -1,0 +1,71 @@
+.contact-section {
+  padding-bottom: 50px;
+}
+
+.contact-content-exact {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 30px;
+  font-family: var(--font-mono);
+  /* Based on image looks mono */
+}
+
+/* Left Text */
+.contact-text-exact {
+  flex: 1;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* Right Box */
+.contact-box-exact {
+  border: 1px solid var(--text-muted);
+  /* Simple thin border */
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.box-title-exact {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.box-items-exact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.box-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.box-item:hover {
+  color: var(--text-main);
+  /* Slight hover effect */
+}
+
+.icon-exact {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .contact-content-exact {
+    flex-direction: column;
+  }
+
+  .contact-box-exact {
+    max-width: 100%;
+  }
+}

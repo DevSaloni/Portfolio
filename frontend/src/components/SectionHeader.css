@@ -1,0 +1,33 @@
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.header-title {
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-main);
+    white-space: nowrap;
+    margin-right: 20px;
+}
+
+.header-title .hash {
+    color: var(--rani-pink);
+}
+
+.header-line {
+    height: 2px;
+    width: 300px;
+    /* or 100% depending on desired look */
+    background: linear-gradient(90deg, var(--rani-pink), transparent);
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .header-line {
+        width: 100px;
+    }
+}

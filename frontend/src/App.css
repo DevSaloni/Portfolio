@@ -1,0 +1,77 @@
+:root {
+  --rani-pink: #ff007f;
+  --rani-glow: rgba(255, 0, 127, 0.4);
+  --rani-dim: rgba(255, 0, 127, 0.1);
+  --bg-dark: #050505;
+  --bg-card: #121212;
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--rani-dim);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rani-pink);
+}
+
+/* Utilities */
+.text-rani {
+  color: var(--rani-pink);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

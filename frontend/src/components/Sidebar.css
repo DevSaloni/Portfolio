@@ -1,0 +1,50 @@
+.sidebar-socials {
+  position: fixed;
+  left: 40px;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 100;
+}
+
+.social-links-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.social-links-vertical a {
+  color: var(--text-muted);
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+.social-links-vertical a:hover {
+  color: var(--rani-pink);
+  transform: translateY(-3px);
+}
+
+.line {
+  width: 1px;
+  background-color: var(--text-muted);
+}
+
+.line.top {
+  height: 100px;
+  background: linear-gradient(to top, var(--rani-pink), transparent);
+  display: none;
+  /* Optional */
+}
+
+.line.bottom {
+  height: 120px;
+  background-color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .sidebar-socials {
+    display: none;
+  }
+}

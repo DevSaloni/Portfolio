@@ -1,0 +1,134 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--rani-pink);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
+    height: 160px;
+    /* Reduced from 200px */
+    width: 100%;
+    background-color: #2a2a2a;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+}
+
+.project-content {
+    padding: 20px;
+    /* Reduced from 25px */
+}
+
+.project-title {
+    color: var(--text-main);
+    font-size: 1.3rem;
+    /* Slightly smaller */
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.project-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* Limit visible lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tech-tag {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--rani-pink);
+    background: rgba(255, 0, 127, 0.05);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-link,
+.btn-git {
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-link {
+    background: var(--rani-pink);
+    color: white;
+    border: 1px solid var(--rani-pink);
+}
+
+.btn-link:hover {
+    background: transparent;
+    color: var(--rani-pink);
+}
+
+.btn-git {
+    border: 1px solid var(--text-muted);
+    color: var(--text-muted);
+}
+
+.btn-git:hover {
+    border-color: var(--text-main);
+    color: var(--text-main);
+}
+
+.more-projects {
+    margin-top: 50px;
+    text-align: right;
+}
+
+.view-all-btn {
+    font-family: var(--font-mono);
+    color: var(--text-main);
+    font-size: 1.1rem;
+}
+
+.view-all-btn span {
+    color: var(--rani-pink);
+}

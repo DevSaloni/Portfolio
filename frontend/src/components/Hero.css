@@ -1,0 +1,393 @@
+.hero-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: var(--bg-dark);
+  padding: 0 10%;
+  overflow: hidden;
+}
+
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(255, 0, 127, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 127, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 10;
+  gap: 50px;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.greeting {
+  color: var(--text-rani);
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cli-prefix {
+  opacity: 0.7;
+}
+
+/* Glitch Effect */
+.name-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #fff;
+  position: relative;
+}
+
+.glitch {
+  position: relative;
+  color: white;
+}
+
+.glitch .text-rani {
+  color: var(--rani-pink);
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-dark);
+  /* Match bg to hide original */
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -1px 0 red;
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -1px 0 blue;
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(20px, 9999px, 10px, 0);
+  }
+
+  10% {
+    clip: rect(50px, 9999px, 80px, 0);
+  }
+
+  20% {
+    clip: rect(10px, 9999px, 90px, 0);
+  }
+
+  30% {
+    clip: rect(90px, 9999px, 10px, 0);
+  }
+
+  40% {
+    clip: rect(30px, 9999px, 50px, 0);
+  }
+
+  50% {
+    clip: rect(60px, 9999px, 20px, 0);
+  }
+
+  60% {
+    clip: rect(10px, 9999px, 40px, 0);
+  }
+
+  70% {
+    clip: rect(80px, 9999px, 10px, 0);
+  }
+
+  80% {
+    clip: rect(40px, 9999px, 70px, 0);
+  }
+
+  90% {
+    clip: rect(70px, 9999px, 20px, 0);
+  }
+
+  100% {
+    clip: rect(20px, 9999px, 60px, 0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip: rect(100px, 9999px, 10px, 0);
+  }
+
+  10% {
+    clip: rect(30px, 9999px, 90px, 0);
+  }
+
+  20% {
+    clip: rect(60px, 9999px, 20px, 0);
+  }
+
+  30% {
+    clip: rect(10px, 9999px, 70px, 0);
+  }
+
+  40% {
+    clip: rect(90px, 9999px, 10px, 0);
+  }
+
+  50% {
+    clip: rect(20px, 9999px, 60px, 0);
+  }
+
+  60% {
+    clip: rect(50px, 9999px, 30px, 0);
+  }
+
+  70% {
+    clip: rect(80px, 9999px, 10px, 0);
+  }
+
+  80% {
+    clip: rect(10px, 9999px, 90px, 0);
+  }
+
+  90% {
+    clip: rect(40px, 9999px, 50px, 0);
+  }
+
+  100% {
+    clip: rect(70px, 9999px, 20px, 0);
+  }
+}
+
+/* Typewriter */
+.role-wrapper {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 30px;
+  /* Fix height to prevent jumping */
+}
+
+.role-wrapper .hash {
+  color: var(--rani-pink);
+}
+
+.role-text {
+  color: #fff;
+  font-weight: 500;
+}
+
+.cursor {
+  display: inline-block;
+  background-color: var(--rani-pink);
+  width: 2px;
+  height: 1.2em;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.description {
+  color: #8892b0;
+  font-size: 1rem;
+  max-width: 480px;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.highlight {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Buttons */
+.cta-group {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.btn-primary {
+  padding: 12px 30px;
+  background: var(--rani-pink);
+  border: 1px solid var(--rani-pink);
+  color: white;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.3);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--rani-pink);
+  box-shadow: none;
+}
+
+.btn-outline {
+  padding: 12px 30px;
+  background: transparent;
+  border: 1px solid var(--text-muted);
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-outline:hover {
+  border-color: var(--rani-pink);
+  color: var(--rani-pink);
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--rani-pink);
+  transform: translateY(-3px);
+}
+
+/* Visusal Right Side */
+.hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.image-frame {
+  position: relative;
+  width: 350px;
+  height: 350px;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  filter: grayscale(100%);
+  transition: 0.5s;
+  z-index: 2;
+  position: relative;
+}
+
+.image-frame:hover .profile-img {
+  filter: grayscale(0%);
+}
+
+.frame-border {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--rani-pink);
+  border-radius: 20px;
+  z-index: 1;
+  box-shadow: 0 0 30px var(--rani-glow);
+}
+
+.code-snippet-card {
+  position: absolute;
+  bottom: -40px;
+  right: -30px;
+  background: rgba(10, 10, 10, 0.9);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  backdrop-filter: blur(5px);
+  z-index: 3;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.k {
+  color: #c678dd;
+}
+
+.s {
+  color: #98c379;
+}
+
+.v {
+  color: #e06c75;
+}
+
+.b {
+  color: #e5c07b;
+}
+
+@media (max-width: 968px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  .hero-text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .role-wrapper {
+    justify-content: center;
+  }
+
+  .image-frame {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 50px;
+  }
+}
