@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Hero.css';
-import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
 const Hero = () => {
   const [text, setText] = useState('');
@@ -9,7 +9,7 @@ const Hero = () => {
   const [typingSpeed, setTypingSpeed] = useState(150);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  const roles = ["Full Stack Developer", "MERN Stack Expert", "Web3/Blockchain Dev"];
+  const roles = ["Full Stack Developer", "MERN Stack Developer", "Web3/Blockchain Dev"];
 
   useEffect(() => {
     const handleTyping = () => {
@@ -86,9 +86,10 @@ const Hero = () => {
 
           {/* Restoring social links as they were part of the "prev" design usually */}
           <div className="social-links">
-            <a href="https://github.com/DevSaloni" target="_blank" rel="noreferrer" className="social-icon-btn"><FaGithub /></a>
-            <a href="https://linkedin.com/in/saloni-pawar-630b23270" target="_blank" rel="noreferrer" className="social-icon-btn"><FaLinkedinIn /></a>
-            <a href="mailto:salonipawar294@gmail.com" target="_blank" rel="noreferrer" className="social-icon-btn"><span className="text-xl">✉</span></a>
+            <a href="https://github.com/DevSaloni" target="_blank" rel="noreferrer" className="social-icon-btn" title="GitHub"><FaGithub /></a>
+            <a href="https://linkedin.com/in/saloni-pawar-630b23270" target="_blank" rel="noreferrer" className="social-icon-btn" title="LinkedIn"><FaLinkedinIn /></a>
+            <a href="https://x.com/SaloniPawa56635" target="_blank" rel="noreferrer" className="social-icon-btn" title="Twitter"><FaTwitter /></a>
+            <a href="mailto:salonipawar294@gmail.com" target="_blank" rel="noreferrer" className="social-icon-btn" title="Email"><FaEnvelope /></a>
           </div>
 
         </div>
@@ -104,7 +105,7 @@ const Hero = () => {
                 <code>
                   <span className="k">const</span> <span className="v">developer</span> = <span className="b">{`{`}</span>{'\n'}
                   {'  '}name: <span className="s">"Saloni"</span>,{'\n'}
-                  {'  '}skills: [<span className="s">"MERN"</span>, <span className="s">"Solidity"</span>, <span className="s">"Web3"</span>],{'\n'}
+                  {'  '}skills: [<span className="s">"MERN"</span>, <span className="s">"JavaScript"</span>, <span className="s">"Web3"</span>],{'\n'}
                   {'  '}hardWorker: <span className="k">true</span>{'\n'}
                   <span className="b">{`}`}</span>;
                 </code>

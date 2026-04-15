@@ -1,65 +1,119 @@
-.skills-container-flat {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  max-width: 1000px;
-  margin: 0 auto;
+.skills-section {
+    overflow-x: hidden;
+    padding-bottom: 80px;
 }
 
-.skill-badge {
-  background: rgba(255, 255, 255, 0.03);
-  padding: 15px 25px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  position: relative;
-  overflow: hidden;
+.skills-marquee-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Ensure it stays within container */
 }
 
-.skill-badge:hover {
-  transform: translateY(-5px) scale(1.05);
-  background: rgba(255, 255, 255, 0.05);
-  border-color: var(--skill-color);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 10px var(--skill-color);
-  /* Glow using css var */
+/* Fade effects at the edges */
+.skills-marquee-wrapper::before,
+.skills-marquee-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px; /* Reduced width for container layout */
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
 }
 
-/* Optional: faint tint of color on bg on hover */
-.skill-badge:hover::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--skill-color);
-  opacity: 0.05;
+.skills-marquee-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-dark), transparent);
 }
 
-.skill-icon {
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
-  transition: 0.3s;
+.skills-marquee-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-dark), transparent);
 }
 
-.skill-badge:hover .skill-icon {
-  transform: rotate(10deg);
+.marquee-track {
+    display: flex;
+    white-space: nowrap;
+    width: 100%;
 }
 
-.skill-name {
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  color: var(--text-muted);
-  font-weight: 500;
-  transition: 0.3s;
+.marquee-content {
+    display: flex;
+    gap: 20px;
+    animation: scroll 40s linear infinite;
+    padding-left: 20px;
 }
 
-.skill-badge:hover .skill-name {
-  color: var(--text-main);
+.marquee-track.right .marquee-content {
+    animation-direction: reverse;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause on hover */
+.marquee-track:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* Pill Design */
+.skill-badge-pill {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px 25px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+    min-width: fit-content;
+}
+
+.skill-badge-pill:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--skill-color);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px var(--skill-color);
+}
+
+.skill-icon-pill {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-name-pill {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+/* Special styling for text-based icons */
+.hard-text, .e-text {
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+    .marquee-content {
+        animation-duration: 25s;
+    }
+    
+    .skill-badge-pill {
+        padding: 10px 20px;
+    }
 }

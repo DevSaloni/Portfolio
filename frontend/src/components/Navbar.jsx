@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Handle Scroll Effect
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
 
-      // Update active link based on scroll position
-      const sections = ["home", "about", "projects", "contact"];
+      const sections = ["home", "about", "skills", "experience", "projects", "contact"];
       const scrollY = window.pageYOffset;
 
       sections.forEach((current) => {
@@ -28,26 +29,33 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   const scrollTo = (id) => {
     const element = document.getElementById(id);
     if (element) {
       window.scrollTo({
-        top: element.offsetTop - 80, // Offset for navbar
+        top: element.offsetTop - 80,
         behavior: "smooth"
       });
       setActiveSection(id);
+      setIsMenuOpen(false); // Close menu on click
     }
   };
 
   return (
-    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+    <nav className={`navbar ${scrolled ? "scrolled" : ""} ${isMenuOpen ? "active" : ""}`}>
       <div className="nav-container">
         <h1 className="nav-logo" onClick={() => scrollTo('home')}>
-          @Saloni<span className="dot">.</span>
+          @Saloni<span className="logo-dot">.</span>
         </h1>
 
-        <ul className="nav-links">
-          {["home", "about", "skills", "projects", "contact"].map((item) => (
+        <button className="mobile-toggle" onClick={toggleMenu}>
+          {isMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+
+        <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
+          {["home", "about", "skills", "experience", "projects", "contact"].map((item) => (
             <li key={item}>
               <button
                 className={`nav-btn ${activeSection === item ? "active" : ""}`}

@@ -7,9 +7,9 @@ const Sidebar = () => {
     <div className="sidebar-socials">
       <div className="line top"></div>
       <div className="social-links-vertical">
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+        <a href="https://github.com/DevSaloni" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+        <a href="https://linkedin.com/in/saloni-pawar-630b23270" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
+        <a href="https://x.com/SaloniPawa56635" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
       </div>
       <div className="line bottom"></div>
     </div>

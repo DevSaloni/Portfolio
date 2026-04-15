@@ -7,11 +7,11 @@ const Quote = () => {
             <div className="quote-box">
                 <span className="quote-mark">“</span>
                 <p className="quote-text font-mono">
-                    Control can sometimes be an illusion. <br />
-                    But sometimes you need illusion to gain control.
+                    Real innovation isn't just about what you build, but the problems you solve. <br />
+                    Precision and passion are the keys to crafting the future of the web.
                 </p>
                 <div className="quote-author">
-                    <span className="dash">-</span> Mr. Robot
+                    <span className="dash">-</span> Professional Mindset
                 </div>
                 <span className="quote-mark end">”</span>
 

@@ -1,0 +1,183 @@
+.experience-section {
+    background-color: var(--bg-dark);
+}
+
+.experience-container {
+    max-width: 1000px;
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.exp-card-modern {
+    background: rgba(18, 18, 18, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+.exp-card-modern:hover {
+    border-color: var(--rani-pink);
+    box-shadow: 0 10px 40px -10px rgba(255, 0, 127, 0.15);
+    background: rgba(18, 18, 18, 0.6);
+}
+
+.exp-card-modern.expanded {
+    border-color: var(--rani-glow);
+    background: rgba(18, 18, 18, 0.8);
+}
+
+.exp-top-row {
+    padding: 24px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.exp-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.exp-logo-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exp-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.exp-company-name {
+    font-size: 1.4rem;
+    color: var(--text-main);
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.exp-role-title {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-family: var(--font-mono);
+}
+
+.exp-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.exp-date-range {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.exp-arrow {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.exp-arrow.rotated {
+    transform: rotate(180deg);
+    color: var(--rani-pink);
+}
+
+/* Expansion Logic */
+.exp-details-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expanded .exp-details-wrapper {
+    max-height: 500px; /* Large enough to contain content */
+}
+
+.exp-details-content {
+    padding: 0 30px 40px 110px; /* Offset to align with text, not logo */
+}
+
+.exp-link-box {
+    margin-bottom: 20px;
+}
+
+.visit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--rani-pink);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+}
+
+.visit-btn:hover {
+    border-bottom-color: var(--rani-pink);
+}
+
+.exp-bullet-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.exp-bullet {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    display: flex;
+    gap: 12px;
+}
+
+.bullet-icon {
+    color: var(--rani-pink);
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .exp-top-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .exp-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .exp-details-content {
+        padding: 0 20px 30px 20px;
+    }
+    
+    .exp-logo-container {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .exp-company-name {
+        font-size: 1.2rem;
+    }
+}

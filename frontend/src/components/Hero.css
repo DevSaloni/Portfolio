@@ -221,30 +221,24 @@
 
 .social-icon-btn {
   color: var(--text-muted);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.05);
-  width: 45px;
-  height: 45px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .social-icon-btn:hover {
   color: var(--rani-pink);
-  transform: scale(1.2) translateY(-5px);
-  background: rgba(255, 0, 127, 0.1);
+  transform: translateY(-5px);
+  background: rgba(255, 0, 127, 0.08);
   border-color: var(--rani-pink);
   box-shadow: 0 10px 20px rgba(255, 0, 127, 0.2);
-}
-
-.social-icon-btn:nth-child(even) {
-  width: 55px;
-  height: 55px;
-  font-size: 1.6rem;
 }
 
 /* Visusal Right Side */
@@ -320,7 +314,7 @@
 
 @media (max-width: 968px) {
   .hero-content {
-    flex-direction: column-reverse;
+    flex-direction: column;
     text-align: center;
     padding-top: 100px;
   }
@@ -335,9 +329,31 @@
     justify-content: center;
   }
 
+  .cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .btn-primary, .btn-outline {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+
   .image-frame {
-    width: 250px;
-    height: 250px;
-    margin-bottom: 50px;
+    width: 280px;
+    height: 280px;
+    margin-bottom: 60px;
+  }
+
+  .code-snippet-card {
+    right: 50%;
+    transform: translateX(50%) scale(0.9);
+    bottom: -60px;
+    width: 280px; /* Increased from 240px */
+    font-size: 0.75rem; /* Slightly smaller font */
+    white-space: pre-wrap;
   }
 }
