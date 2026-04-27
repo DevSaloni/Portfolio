@@ -7,7 +7,7 @@ const projectsData = [
     {
         id: 1,
         title: "Maid Finder (Web3 Platform)",
-        description: "A blockchain-based platform connecting verified women workers with employers. Features an Ethereum smart contract escrow system for secure payments and IPFS for decentralized profile storage.",
+        description: "A decentralized labor marketplace empowering workers through secure, blockchain-verified employment and transparent smart-contract payments.",
         tech: ["MERN", "Solidity", "Ethereum", "Ethers.js", "IPFS", "Hardhat"],
         liveLink: "https://maid-finder-delta.vercel.app/",
         githubLink: "https://github.com/DevSaloni/maid-finder",
@@ -16,11 +16,20 @@ const projectsData = [
     {
         id: 2,
         title: "College Project Showcase",
-        description: "A role-based project tracking system with Admin, Mentor, and Student dashboards. Includes proposal approval workflow, weekly progress tracking, and real-time chat collaboration.",
+        description: "An academic management platform that digitizes the project lifecycle, enabling real-time collaboration between mentors and students.",
         tech: ["MongoDB", "Express.js", "Next.js", "Node.js", "JWT", "Socket.io"],
         liveLink: "https://college-project-showcase.vercel.app/",
         githubLink: "https://github.com/DevSaloni/college-project-showcase",
         image: "/project2-banner.png"
+    },
+    {
+        id: 3,
+        title: "Smart Lost and Found (AI Platform)",
+        description: "An AI-powered recovery ecosystem that automates matching lost items using multimodal analysis and real-time smart notifications.",
+        tech: ["MERN", "PostgreSQL", "Gemini AI", "Socket.io", "Nodemailer", "Twilio"],
+        liveLink: "https://smart-lost-found.vercel.app/",
+        githubLink: "https://github.com/DevSaloni/smart-lost-found",
+        image: "/project3-banner.png"
     }
 ];
 

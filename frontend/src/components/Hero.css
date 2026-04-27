@@ -5,7 +5,7 @@
   position: relative;
   background-color: var(--bg-dark);
   padding: 0 10%;
-  overflow: hidden;
+  overflow-x: hidden; /* Only hide horizontal overflow */
 }
 
 .grid-overlay {
@@ -294,6 +294,13 @@
   font-family: var(--font-mono);
   font-size: 0.8rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+
+.code-snippet-card pre,
+.code-snippet-card code {
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 .k {
@@ -313,16 +320,23 @@
 }
 
 @media (max-width: 968px) {
+  .hero-container {
+    padding: 0 5%; /* Less padding on mobile */
+  }
+
   .hero-content {
     flex-direction: column;
     text-align: center;
     padding-top: 100px;
+    padding-bottom: 50px; /* Add bottom padding */
+    gap: 30px;
   }
 
   .hero-text {
     align-items: center;
     display: flex;
     flex-direction: column;
+    padding-top: 0;
   }
 
   .role-wrapper {
@@ -342,18 +356,25 @@
     font-size: 1.1rem;
   }
 
+  .hero-visual {
+    width: 100%;
+    padding: 0 20px;
+  }
+
   .image-frame {
-    width: 280px;
-    height: 280px;
-    margin-bottom: 60px;
+    width: min(300px, 80vw); /* Responsive size */
+    height: min(300px, 80vw);
+    margin-bottom: 40px;
   }
 
   .code-snippet-card {
-    right: 50%;
-    transform: translateX(50%) scale(0.9);
-    bottom: -60px;
-    width: 280px; /* Increased from 240px */
-    font-size: 0.75rem; /* Slightly smaller font */
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) scale(0.85);
+    bottom: -50px;
+    width: min(280px, 90vw);
+    font-size: 0.7rem;
     white-space: pre-wrap;
+    padding: 12px;
   }
 }

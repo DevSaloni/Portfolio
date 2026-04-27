@@ -96,10 +96,9 @@ const Hero = () => {
 
         <div className="hero-visual" style={{ transform: `translate(-${mousePosition.x}px, -${mousePosition.y}px)` }}>
           <div className="image-frame">
-            <img src="/hero-girl.png" alt="Saloni Pawar" className="profile-img" />
+            <img src="/lofi-code-girl-v2.png" alt="Saloni Pawar" className="profile-img" />
             <div className="frame-border"></div>
 
-            {/* Restored Code Snippet Card */}
             <div className="code-snippet-card">
               <pre>
                 <code>
