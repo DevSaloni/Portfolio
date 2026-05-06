@@ -22,13 +22,13 @@ const About = ({ onOpenResume }) => {
             </p>
 
             <div className="open-to-work font-mono">
-                <span className="dot-blink"></span>
-                Open to Work: Full-Time or Freelance. Let's talk.
+              <span className="dot-blink"></span>
+              Open to Work: Full-Time or Freelance. Let's talk.
             </div>
 
             <div className="about-actions">
-              <button 
-                onClick={onOpenResume} 
+              <button
+                onClick={onOpenResume}
                 className="resume-btn-simple"
                 style={{ background: 'transparent', cursor: 'pointer' }}
               >

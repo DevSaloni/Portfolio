@@ -4,17 +4,9 @@ import SectionHeader from './SectionHeader';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const projectsData = [
+
     {
         id: 1,
-        title: "Maid Finder (Web3 Platform)",
-        description: "A decentralized labor marketplace empowering workers through secure, blockchain-verified employment and transparent smart-contract payments.",
-        tech: ["MERN", "Solidity", "Ethereum", "Ethers.js", "IPFS", "Hardhat"],
-        liveLink: "https://maid-finder-delta.vercel.app/",
-        githubLink: "https://github.com/DevSaloni/maid-finder",
-        image: "/project1-banner.png"
-    },
-    {
-        id: 2,
         title: "College Project Showcase",
         description: "An academic management platform that digitizes the project lifecycle, enabling real-time collaboration between mentors and students.",
         tech: ["MongoDB", "Express.js", "Next.js", "Node.js", "JWT", "Socket.io"],
@@ -23,10 +15,10 @@ const projectsData = [
         image: "/project2-banner.png"
     },
     {
-        id: 3,
+        id: 2,
         title: "Smart Lost and Found (AI Platform)",
         description: "An AI-powered recovery ecosystem that automates matching lost items using multimodal analysis and real-time smart notifications.",
-        tech: ["MERN", "PostgreSQL", "Gemini AI", "Socket.io", "Nodemailer", "Twilio"],
+        tech: ["React", "Node.js", "Express", "PostgreSQL", "Gemini AI", "Socket.io", "Twilio"],
         liveLink: "https://smart-lost-found.vercel.app/",
         githubLink: "https://github.com/DevSaloni/smart-lost-found",
         image: "/project3-banner.png"
