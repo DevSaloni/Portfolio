@@ -38,7 +38,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
           <section className="resume-section">
             <h2 className="resume-section-title">Profile</h2>
             <p className="resume-text">
-              Full Stack Developer specializing in MERN stack and real-time web applications. Experienced in building responsive and user-focused web applications with AI-powered features, Web3 integrations, and real-time communication using Socket.io. Passionate about solving real-world problems through efficient and practical solutions.
+              Full Stack Developer skilled in MERN stack and Web3 technologies. Experienced in building responsive web apps and decentralized applications (dApps) using React, Node.js, MongoDB, and Ethereum.
             </p>
           </section>
 
@@ -46,22 +46,19 @@ const ResumeModal = ({ isOpen, onClose }) => {
             <h2 className="resume-section-title">Skills</h2>
             <div className="resume-skills-grid">
               <div className="resume-skill-cat">
-                <strong>Languages:</strong> Java, JavaScript, TypeScript, SQL, Solidity, HTML, CSS
+                <strong>Languages:</strong> Java, JavaScript, TypeScript, SQL, Solidity, Python, HTML, CSS
               </div>
               <div className="resume-skill-cat">
-                <strong>Frontend:</strong> ReactJS, NextJS, Tailwind CSS
+                <strong>Frameworks/Libraries:</strong> ReactJS, Node.js, Express.js, NextJS, Tailwind CSS
               </div>
               <div className="resume-skill-cat">
-                <strong>Backend:</strong> Node.js, Express.js
-              </div>
-              <div className="resume-skill-cat">
-                <strong>Databases:</strong> MongoDB, Redis, PostgreSQL
+                <strong>Databases:</strong> MongoDB, MySQL, Redis, PostgreSQL
               </div>
               <div className="resume-skill-cat">
                 <strong>Web3 & Blockchain:</strong> Ethereum, Solidity, Hardhat, MetaMask, Ethers.js, Web3.js, IPFS
               </div>
               <div className="resume-skill-cat">
-                <strong>Tools & Platforms:</strong> Git, GitHub, VS Code, Render, Vercel
+                <strong>Tools & Platforms:</strong> Git, GitHub, VS Code, Eclipse IDE, Render, Vercel
               </div>
             </div>
           </section>
@@ -100,7 +97,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
               <div className="resume-item-header">
                 <h3>Smart Lost and Found (AI Platform) | <a href="https://smart-lost-found.vercel.app/" target="_blank" rel="noreferrer" className="resume-link-mini">Live Demo</a></h3>
               </div>
-              <p className="resume-tech">Tech: React.js, Express.js, Node.js, PostgreSQL, Gemini AI, Socket.io, Nodemailer, Twilio</p>
+              <p className="resume-tech">Tech: , PostgreSQL, Gemini AI, Socket.io, Nodemailer, Twilio</p>
               <ul className="resume-list">
                 <li>Built an AI-powered recovery ecosystem that automates matching lost items using multimodal analysis.</li>
                 <li>Integrated Gemini AI for intelligent item matching and image recognition to improve recovery rates.</li>
@@ -124,7 +121,7 @@ const ResumeModal = ({ isOpen, onClose }) => {
           <section className="resume-section">
             <h2 className="resume-section-title">Awards and Certificates</h2>
             <ul className="resume-list">
-              <li>Participated in college-level hackathon and developed an innovative project under time constraints.</li>
+              <li>Participated in college-level hackathon and developed an innovative project under time constraints</li>
               <li>Collaborated in a team environment to build a working prototype.</li>
             </ul>
           </section>

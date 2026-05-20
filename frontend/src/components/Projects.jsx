@@ -16,13 +16,23 @@ const projectsData = [
     },
     {
         id: 2,
-        title: "Smart Lost and Found (AI Platform)",
+        title: "Smart Lost and Found",
         description: "An AI-powered recovery ecosystem that automates matching lost items using multimodal analysis and real-time smart notifications.",
-        tech: ["React", "Node.js", "Express", "PostgreSQL", "Gemini AI", "Socket.io", "Twilio"],
+        tech: ["React.js", "Express.js", "Node.js", "PostgreSQL", "Gemini AI", "Socket.io", "Nodemailer", "Twilio"],
         liveLink: "https://smart-lost-found.vercel.app/",
         githubLink: "https://github.com/DevSaloni/smart-lost-found",
         image: "/project3-banner.png"
+    },
+    {
+        id: 3,
+        title: "MeetLoop",
+        description: "An AI-powered meeting intelligence SaaS that automates action item extraction, tracks commitments, and drives team accountability in real time.",
+        tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Gemini AI", "Socket.io", "Tailwind CSS", "Vercel"],
+        liveLink: "https://meetloop-jet.vercel.app/",
+        githubLink: "https://github.com/DevSaloni/MeetLoop",
+        image: "/project4-banner.png"
     }
+
 ];
 
 const Projects = () => {
